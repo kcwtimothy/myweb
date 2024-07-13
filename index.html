@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Timothy Wong's Introduction">
+    <meta name="keywords" content="Personal page, Projects">
+    <meta name="author" content="Timothy Wong Ka Chun">
+    <title>Wong Ka Chun (Timothy) - Data Analyst Portfolio</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/utilities.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar" id="topNav">
+            <div class="container flex">
+                <!-- Logo image spanned to the right of the page-->
+                <div class="logo-image">
+                  <!-- Specify the icon-id and has css animation added to it for a infinite rotation-->
+                  <img src="images/jupiter-removebg.png" id = "juplogo" alt="Icon of Planets Orbiting" >
+                </div>
+                <!-- Below is the normal navigation bar shown on a normal device with width >700px-->
+                <nav id = "normalNav">
+                    <ul>
+                        <!-- 1. icon that links back to homepage-->
+                        <li>
+                            <a href="index.html" title="Home Page"><i class="fa fa-home" style="font-size:20px"></i>&nbspHome</a>    
+                        </li>
+                        <!-- 2. dropdown menu for the project icon-->
+                        <li>
+                            <div class="dropdown">
+                                <a><i class="fa fa-television"></i>Projects</a>
+                                <!-- Dropdown content with three choices-->
+                                <div class="dropdown-content" id="WorkDropdown">
+                                <a href="amzn_recommend.html">Product Recommendation Demo</a>
+                                <a href="#">pseudo</a>
+                                <a href="#">pseudo</a>
+                            </div>
+                        </li>                  
+                        <!-- 3. dropdown menu for language icon-->
+                        <li>
+                        <div class="dropdown">
+                            <a><i class="fa fa-globe"></i></a>
+                            <!-- Dropdown content with one language choice-->
+                            <div class="dropdown-content" id="langContent">
+                                <a href="#">English</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Below is the responsive display behavior of a hamburger menu for mobile devices-->
+            <nav id="resNav">
+                <ul>
+                    <div class="dropdown" id="resDropdown">
+                        <a href="index.html" title="Home Page"><i class="fa fa-home" style="font-size:20px"></i></a> 
+                        <a><i class="fa fa-bars"></i></a>
+                        <div class="dropdown-content" id="resWorkDropdown">
+                            <a href="amzn_recommend.html">Product Recommendation Demo</a>
+                            <a href="#">pseudo</a>
+                            <a href="#">pseudo</a>
+                        </div>          
+                    </div>
+                    <div class="dropdown" id="resLangDropdown">
+                        <a><i class="fa fa-globe"></i></a>
+                        <div class="dropdown-content" id="resLangContent">
+                            <a href="#">English</a>
+                    </div>
+                </ul>
+            </nav>   
+        </nav>
+    </header>
+
+    <!-- First section: Intro. -->
+    <section id="home" class="hero">
+        <div class="container grid">
+            <div class="showcase-text">
+                <h1>Wong Ka Chun (Timothy)</h1>
+                <h2>Data Analyst</h2>
+                <h3>Transforming complex data into actionable insights</h3>
+                <a href="#" id="contactBtn" class="btn btn-outline-secondary" style = "margin-top: 20px;">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+    <section id="stats">
+        <div class="container">
+            <div class="grid" style="grid-template-columns: 1fr 1fr 1fr; padding: 20px;">
+                <div class="text-content">
+                    <h3 class="stats-heading text-left my-1" style="text-align: left; margin-left: 0;">
+                        <p class="text-primary">About Me</p>
+                        <p style="font-size: 18px;">Data Analyst with 4 years of experience in data management, analytics, and application development. Skilled in R programming, data mining, and metadata management. Passionate about leveraging data to drive business insights and decision-making.</p>   
+                    </h3>
+                </div>
+                <div class="text-content">
+
+                </div>
+                <div class="image-content">
+                    <img src="images/house_price_plot.png" id = "house_price_plot" alt="A plot">
+                </div>
+        </div>
+            
+            <div class="grid grid-3 text-center my-4" style="grid-template-columns: 1fr 3fr; gap: 20px; padding: 20px;">
+                <!-- Below showcase the three pieces of statistic information divided into 3 grids of area-->
+                <div class="skills">     
+                    <div class="skills-title">
+                        <h3>Skills &nbsp&nbsp<i class="fa fa-check fa-2x" aria-hidden="true"></i></h3>
+                    </div>                                     
+                    <ul class="text-secondary" style="text-align: left; list-style-type: disc; list-style-position: inside;">
+                        <li>R Programming (Shiny, data.table, dplyr, ggplot2)</li>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>PostgreSQL</li>
+                        <li>Cloud Data Management (Amazon S3)</li>
+                        <li>Metadata Management</li>
+                        <li>Web Scraping</li>
+                        <li>Data Visualization</li>
+                        <li>Medical Data Domain Knowledge</li>
+                    </ul>
+                </div>
+                <div class="work-contributions">
+                    <div class="work-contributions-title">
+                        <h3>Work Contributions &nbsp&nbsp<i class="fa fa-suitcase fa-2x" aria-hidden="true"></i></h3>
+                    </div>
+                    <ul class="text-secondary" style="text-align: left; list-style-type: square; list-style-position: inside;">
+                        <li>Developed, maintained a data lineage and management application with PostgreSQL and S3 datalake.</li>
+                        <li>Collaborated with data scientists to develop and implement predictive models for client medical data.</li>
+                        <li>Developed a web scraping application from Hong Kong open data sources for use in decision models.</li>
+                        <li>Exploratory data analysis to identify relevant features for decision models, including client clinical and insurance policy records.</li>
+                        <li>ETL tasks for model data preparation.</li>
+                        <li>Collaborated with cross-functional teams to understand business needs and translate them into technical data solutions.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <ul>
+                        <li>
+                            <a href="#" id="contactBtn">Contact Me!</a>
+                            <div id="contactModal" class="modal">
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <h2>Feel Free to Leave Your Message Here!An Email will be sent to me!</h2>
+                                    <form id="contactForm">
+                                        Name:<br>
+                                        <input type="text" size="19" name="ContactName" id="ContactName">
+                                        <br>
+                                        Message:<br>
+                                        <textarea id="ContactComment" name="ContactComment" cols="50" rows="10"></textarea>
+                                        <br><br>
+                                        <button type="submit" style="background: none; border: none;">
+                                            <a><i class="fa fa-paper-plane fa-2x"></i>Send!</a>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                        <p class="copyright">&copy; 2024 Wong Ka Chun (Timothy)</p>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Simple js which improves modal dialogue opening/closing behavior-->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script src="scripts/modal.js"></script>
+    </footer>
+</body>
+</html>

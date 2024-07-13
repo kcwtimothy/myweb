@@ -1,0 +1,345 @@
+:root {
+  --primary-color: #414141;
+  --secondary-color: #6c6c6c;
+  --dark-color: #002240;
+  --light-color: #f4f4f4;
+  --success-color: #5cb85c;
+  --error-color: #d9534f;
+  --card-background2 : #303032 ;
+  --jup: #B45C3D;
+
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: flexible;
+  padding: 0 40px;
+}
+
+.card {
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+/* Project Grid */
+
+
+.card_main_grid {
+
+  display: grid;
+  grid-template-columns: repeat(24, minmax(auto,60px));
+
+}
+
+.card_outline {
+
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+  padding: 20px;
+  background-color: #fff;
+  color: #333;
+  margin: 10px;
+  grid-gap: 30px;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  grid-column-end: span 6;
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.card_image-container {
+  width: 100%;
+  border-radius: 10px;
+  padding-top: 56.25%;
+  overflow: hidden;
+  position: relative;
+  transition: 1s;
+}
+
+.card_image-container img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card_title {
+  margin-bottom: 20px;
+}
+
+.card_info {
+  display: flex;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr repeat(5, minmax(auto,60px));
+  margin-left:100px;
+  padding: 20px 0;
+}
+
+.text--medium{
+
+  font-family: 'Lato', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.card_outline:hover {
+  transform: scale(0.98);
+}
+
+.project_grid {
+  display:grid;
+  grid-template-columns: repeat(5, minmax(auto,500px)) 1fr;
+  grid-gap: 10px;
+}
+/* This is the sun bright button */
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  font-size: 30px;
+  cursor: pointer;
+  background: var(--primary-color);
+  color: white;
+  border: white 4px solid;
+  border-radius: 5px;
+
+  text-shadow:
+    0 0 0.125em white,
+    0 0 0.45em currentColor;
+  box-shadow:
+    inset 0 0 0.5em 0 white,
+    0 0 0.5em 0 white;
+  position: relative;
+}
+
+.btn::before {
+  content:"";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(1em);
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 0 0 2em 0.5em var(--jup);
+  opacity: 0;
+  background-color: var(--jup);
+  z-index: -1;
+  transition: opacity 100ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+  color: var(--clr-bg);
+  text-shadow: none;
+}
+
+.btn:hover::before,
+.btn:focus::before {
+  opacity: 1;
+}
+.btn:hover::after,
+.btn:focus::after {
+  opacity: 1;
+}
+
+
+.btn:hover {
+  transform: scale(0.98);
+}
+
+@media only screen and (max-width: 1200px) {
+  .card_outline {
+    grid-column-end: span 12 ;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  main {
+    grid-gap: 20px;
+  }
+  .card_outline {
+    grid-column-end: span 16 ;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  main {
+    grid-gap: 20px;
+  }
+  .card_outline {
+
+    grid-column-end: span 14;
+  }
+}
+
+/* Backgrounds & colored buttons */
+.bg-primary,
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.bg-secondary,
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+.bg-dark,
+.btn-dark {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+
+.bg-light,
+.btn-light {
+  background-color: var(--light-color);
+  color: #333;
+}
+
+.bg-primary a,
+.btn-primary a,
+.bg-secondary a,
+.btn-secondary a,
+.bg-dark a,
+.btn-dark a {
+  color: #fff;
+}
+
+/* Feature Objects */
+
+.project_image {
+  width: 100%;
+  border-radius: 20px;
+  padding-top: 56.25%;
+  overflow: hidden;
+  position: relative;
+}
+.project_image img {
+  width: 65%;
+  position: absolute;
+  border-radius: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Text colors */
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.text-dark {
+  color: var(--dark-color);
+}
+
+.text-light {
+  color: var(--light-color);
+}
+
+/* Text sizes */
+.lead {
+  font-size: 20px;
+}
+
+.sm {
+  font-size: 1rem;
+}
+
+.md {
+  font-size: 2rem;
+}
+
+.lg {
+  font-size: 3rem;
+}
+
+.xl {
+  font-size: 4rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.project_body {
+  font-family: 'Lato', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.flex {
+  max-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* This is drop down menu created for choosing language */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* As the dropdown mennu is on the top right of the browser, it's essential to make position absolute & right:0px; in order to properly display */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0px;
+  background-color: var(--light-color);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);;
+  flex-direction: column;
+  min-width: fit-content;
+  padding: 0;
+  /* Always showing op top of anything */
+  z-index: 100;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--dark-color);
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+

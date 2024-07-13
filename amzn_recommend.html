@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Meta tags and links to css and other elements -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Timothy Wong's Introduction">
+    <meta name="keywords" content="Personal page, Projects">
+    <meta name="author" content="Timothy Wong Ka Chun">
+    <title>Amazon Product Recommendation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/utilities.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<!-- Page content -->
+<nav class="main">
+    <nav class="navbar" id="topNav">
+        <div class="container flex">
+            <!-- Logo image spanned to the right of the page-->
+            <div class="logo-image">
+              <!-- Specify the icon-id and has css animation added to it for a infinite rotation-->
+              <img src="images/jupiter-removebg.png" id = "juplogo" alt="Icon of Planets Orbiting" >
+            </div>
+            <!-- Below is the normal navigation bar shown on a normal device with width >700px-->
+            <nav id = "normalNav">
+                <ul>
+                    <!-- 1. icon that links back to homepage-->
+                    <li>
+                        <a href="index.html" title="Home Page"><i class="fa fa-home" style="font-size:20px"></i>&nbspHome</a>    
+                    </li>
+                    <!-- 2. dropdown menu for the project icon-->
+                    <li>
+                        <div class="dropdown">
+                            <a><i class="fa fa-television"></i>Projects</a>
+                            <!-- Dropdown content with three choices-->
+                            <div class="dropdown-content" id="WorkDropdown">
+                            <a href="#">Product Recommendation Demo</a>
+                            <a href="#">pseudo</a>
+                            <a href="#">pseudo</a>
+                        </div>
+                    </li>                  
+                    <!-- 3. dropdown menu for language icon-->
+                    <li>
+                    <div class="dropdown">
+                        <a><i class="fa fa-globe"></i></a>
+                        <!-- Dropdown content with one language choice-->
+                        <div class="dropdown-content" id="langContent">
+                            <a href="#">English</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Below is the responsive display behavior of a hamburger menu for mobile devices-->
+        <nav id="resNav">
+            <ul>
+                <div class="dropdown" id="resDropdown">
+                    <a href="index.html" title="Home Page"><i class="fa fa-home" style="font-size:20px"></i></a> 
+                    <a><i class="fa fa-bars"></i></a>
+                    <div class="dropdown-content" id="resWorkDropdown">
+                        <a href="#">Product Recommendation Demo</a>
+                        <a href="#">pseudo</a>
+                        <a href="#">pseudo</a>
+                    </div>          
+                </div>
+                <div class="dropdown" id="resLangDropdown">
+                    <a><i class="fa fa-globe"></i></a>
+                    <div class="dropdown-content" id="resLangContent">
+                        <a href="#">English</a>
+                </div>
+            </ul>
+        </nav>  
+        <div class="line"></div> 
+    </nav>
+</nav>
+
+<!-- Main Content: 3 grid box with a 1/3 card and 2/3 card -->
+<main class="card_main_grid">
+    <!-- First block container that takes up one grid./ clickable button content -->
+        <div class="card_col_small">
+            <a href="https://www.kaggle.com/code/timothykcw/amzn-product-recommendation" class="card_outline"></a>
+            <div class="card_image-container">
+                <!-- Image of attractions -->
+                <img src="#" alt="amzn rec proj img" width="250" height="250">
+            </div>
+            <!-- Link -->
+            <div class="card_content">
+                <h3 class="card__title text--medium">Check it out on Kaggle!</h3>
+            </div>
+            <!-- Link Caption -->
+            <div class="card_info">
+                <p class="card__title text--medium">
+                    A Demo for Data Analysis, Adaption of Collaborative Filtering & Content Based Filtering System
+                </p>
+            </div>
+        </div>
+    </a>
+    <!-- Second block container that takes up two grids.-->
+    <div class="card_col_large">
+        <div class="card_content">
+            <h3 class="card__title text--medium">Amazon Product Recommendation</h3>
+        </div>
+        <div class="card_info">
+            <p>
+                In this project, I developed an Amazon product recommendation system based on user-item interaction data using both collaborative and content-based filtering techniques. The goal was to enhance user experience by suggesting products tailored to individual preferences. Leveraging user-item interaction data and product attributes, I employed various algorithms to generate accurate and personalized recommendations. This project showcases my skills in data analysis, machine learning, and Python programming, with a focus on real-world applications in e-commerce.
+            </p>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-row">
+            <div class="footer-col">
+                <ul>
+                    <li>
+                        <a href="#" id="contactBtn">Contact Me!</a>
+                        <div id="contactModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <h2>Feel Free to Leave Your Message Here!An Email will be sent to me!</h2>
+                                <form id="contactForm">
+                                    Name:<br>
+                                    <input type="text" size="19" name="ContactName" id="ContactName">
+                                    <br>
+                                    Message:<br>
+                                    <textarea id="ContactComment" name="ContactComment" cols="50" rows="10"></textarea>
+                                    <br><br>
+                                    <button type="submit" style="background: none; border: none;">
+                                        <a><i class="fa fa-paper-plane fa-2x"></i>Send!</a>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+                    <p class="copyright">&copy; 2024 Wong Ka Chun (Timothy)</p>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Simple js which improves modal dialogue opening/closing behavior-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="scripts/modal.js"></script>
+</footer>
+</body>
+</html>
