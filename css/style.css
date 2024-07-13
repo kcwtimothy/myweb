@@ -86,9 +86,23 @@ img {
   }
 }
 
+@media screen and (max-width: 767px) {
+  #juplogo {
+    width: 8vw; /* slightly smaller on medium screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #juplogo {
+    width: 0.1vw; /* even smaller on very small screens */
+  }
+}
+
 #juplogo {
-  width: 8rem;
-  height: 8rem;
+  width: 50vw; /* 10% of the viewport width */
+  height: auto; /* maintain aspect ratio */
+  max-width: 8rem; /* maximum size */
+  min-width: 0.1rem; /* minimum size */
   position: absolute;
   top: 4px;
   left: 50px;
@@ -262,6 +276,9 @@ div.content {
 
 .text-content {
     width: 50%; /* Adjust the width as needed */
+    max-width: 100%;
+    padding: 0 15px;
+  }
 }
 
 .image-content {
@@ -271,8 +288,18 @@ div.content {
 }
 
 .image-content img {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+      grid-template-columns: 1fr;
+  }
+
+  .image-content img {
+      max-width: 100%;
+  }
 }
  .hero {
    height: auto;
@@ -392,7 +419,7 @@ ul{
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 100; /* Sit on top */
-  padding-top: 100px;
+  padding-top: 110px;
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -403,10 +430,41 @@ ul{
 /* Card Content */
 .card_main_grid {
   display: grid;
-  grid-template-columns: 1fr 2fr; /* Two columns: first is 1fr, second is 2fr */
-  gap: 20px; /* Adjust the gap between grid items as needed */
-  padding: 20px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
+
+/* Default style for larger screens */
+@media screen and (min-width: 768px) {
+  .card_main_grid {
+      grid-template-columns: 1fr 2fr;
+      padding: 20px;
+      gap: 20px; /* Adjust the gap between grid items as needed */
+  }
+}
+
+/* Style for mobile screens */
+@media screen and (max-width: 767px) {
+  .card_main_grid {
+      grid-template-columns: 1fr;
+      padding: 5px;
+  }
+
+  .card_col_small, .card_col_large {
+      width: 100%;
+  }
+
+  .card_image-container img {
+      width: 100%;
+      height: auto;
+  }
+
+  .card_info p {
+      font-size: 14px;
+      line-height: 1.4;
+  }
+}
+
 .card_outline {
   text-decoration: none;
   color: inherit;
@@ -446,6 +504,12 @@ textarea {
   text-align: left;
 
 }
+
+@media screen and (max-width: 767px) {
+  textarea {
+    max-width: 230px;
+    max-height: 200px;
+  }
 
 /* The Close Button */
 .close {
