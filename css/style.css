@@ -105,7 +105,7 @@ img {
   min-width: 0.1rem; /* minimum size */
   position: absolute;
   top: 4px;
-  left: 50px;
+  left: 14px;
   z-index: 100;
   animation-name: logospin;
   animation-iteration-count: infinite;
@@ -137,7 +137,7 @@ img {
   margin: 20px 0;
 }
 
-.hero .grid {
+.hero {
   overflow: visible;
   grid-template-columns: 55% 45% ;
   gap: 30px;
@@ -164,6 +164,23 @@ img {
 
 .navbar .flex {
   justify-content: space-between;
+}
+
+.skills-contributions {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 15px;
+  padding: 15px;
+  align-items: start;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+  .skills-contributions {
+      grid-template-columns: 1fr;
+      gap: 10px;
+      padding: 15px;
+  }
 }
 
 
@@ -245,19 +262,16 @@ div.content {
 .skills-title, .work-contributions-title {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
 }
 
-.skills-title i .work-contributions-title i{
-  margin-right: 10px;
-}
-
-.skills-title h3, .work-contributions-title h3 {
-  margin: 0; /* Remove default margins */
+.skills-title i, .work-contributions-title i {
+  margin-left: 10px; /* Space between text and icon */
 }
 
 .skills, .work-contributions {
   display: flex;
+  padding: 20 0 0 0;
+  margin: 20 0 0 0;
   flex-direction: column;
   align-items: flex-start;
 }
