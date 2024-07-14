@@ -37,8 +37,8 @@
                             <!-- Dropdown content with three choices-->
                             <div class="dropdown-content" id="WorkDropdown">
                             <a href="amzn_recommend.html">Product Recommendation Demo</a>
-                            <a href="#">StockInsight Tool</a>
-                            <a href="shiny.html">Rshiny App-Data Management</a>
+                            <a href="stock.html">StockInsight Tool</a>
+                            <a href="#">Rshiny App-Data Management</a>
                         </div>
                     </li>                  
                     <!-- 3. dropdown menu for language icon-->
@@ -61,8 +61,8 @@
                     <a><i class="fa fa-bars"></i></a>
                     <div class="dropdown-content" id="resWorkDropdown">
                         <a href="amzn_recommend.html">Product Recommendation Demo</a>
-                        <a href="#">StockInsight Tool</a>
-                        <a href="shiny.html">Rshiny App-Data Management</a>
+                        <a href="stock.html">StockInsight Tool</a>
+                        <a href="#">Rshiny App-Data Management</a>
                     </div>          
                 </div>
                 <div class="dropdown" id="resLangDropdown">
@@ -80,48 +80,46 @@
 <main class="card_main_grid">
     <!-- First block container that takes up one grid./ clickable button content -->
         <div class="card_col_small">
-            <a href="https://github.com/kcwtimothy/stockInsight" class="card_outline">
-            <div class="card_image-container">
-                <!-- Image of attractions -->
-                <img src="images\AAPL_stock_data_plot_06012023_07122024.png" alt="stock proj img" width="250" height="250">
-            </div>
-            <!-- Link -->
-            <div class="card_content">
-                <h3 class="card__title text--medium">Check out my github repo!</h3>
-            </div>
-            <!-- Link Caption -->
-            <div class="card_info">
-                <p class="card__title text--medium">
-                    A Demo for Data Processing and Visualization
-                </p>
-            </div>
+            <a href="https://github.com/kcwtimothy/data_lineage-shiny_app" class="card_outline">
+                <div class="card_image-container">
+                    <!-- Image of attractions -->
+                    <img src="images\shiny.png" alt="rshiny proj img" width="250" height="250">
+                </div>
+                <!-- Link -->
+                <div class="card_content">
+                    <h3 class="card__title text--medium">Check out my Github repo!</h3>
+                </div>
+                <!-- Link Caption -->
+                <div class="card_info">
+                    <p class="card__title text--medium">
+                        A prototype Rshiny app for Data Management and Lineage
+                    </p>
+                </div>
             </a>
         </div>
+    </a>
     <!-- Second block container that takes up two grids.-->
     <div class="card_col_large">
         <div class="card_content">
-            <h3 class="card__title text--medium">Stock Insight: Your User-Friendly Stock Analysis Tool</h3>
-            <h4 class="card__title text--medium" style="padding: 10px;">Stock Insight is a straightforward, easy-to-use tool designed to simplify stock data analysis. With its user-friendly interface, you can quickly:</h4>
+            <h3 class="card__title text--medium">Rshiny app: Data Management & Lineage Tool</h3>
+            <h4 class="card__title text--medium">In many organizations, managing data effectively can be a complex and challenging task. This prototype was created to address some of the common pain points in data management, including:</h4>
         </div>
         <div class="grid" style=" display: grid;grid-template-columns: 1fr 2fr; gap: 8px; padding: 5px;">
             <div class="card_info">
                 <ul style="text-align: left; list-style-type: disc; list-style-position: inside; font-size: 15px;">
-                    <li>Download and visualize stock data</li>
-                    <li>Calculate key technical indicators (EMA, RSI, etc.)</li>
-                    <li>Evaluate option probabilities using the Black-Scholes model</li>
-                    <li>Generate clear, informative plots</li>
-                    <li>Save data for further analysis</li>
-                    <li>Capture relevant economic events</li>
+                    <li>Data Lineage Tracking: The app allows users to create and manage data lineage tables, providing a clear view of data transformations and dependencies.</li>
+                    <li>Dynamic Table Creation: Users can create new tables on the fly, specifying column names and types.</li>
+                    <li>Data Entry Management: The app provides interfaces for creating, updating, and deleting data entries across multiple tables.</li>
+                    <li>Data Visualization: Utilizing the DiagrammeR package, the app offers visual representations of data relationships.</li>
+                    <li>Dual Database Support: The prototype is designed to work with two separate SQLite databases, allowing for flexible data management scenarios.</li>
                 </ul>
             </div>
             <div class="'class_info">
                 <p>
-                    The tool's main advantage is its simplicity. Just input your desired stock tickers and date range, and Stock Insight handles the rest. Whether you're a seasoned trader or new to stock analysis, Stock Insight provides valuable information without the complexity. It's designed to make informed trading decisions more accessible, combining powerful analysis with ease of use.
-                    Get started quickly and focus on what matters - understanding your stock data and making informed decisions.      
+                    This repository contains a prototype data management application that I developed during my time at my previous company. The application is built using R Shiny and is designed to streamline data management processes, improve data lineage tracking, and enhance overall data governance.      
                 </p> 
             </div>
         </div>
-       
     </div>
 </main>
 <footer class="footer">
