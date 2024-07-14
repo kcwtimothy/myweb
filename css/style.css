@@ -343,6 +343,36 @@ iframe {
   z-index: 0;
 }
 
+.dropdown-content {
+  position: absolute;
+  right: auto;  /* Aligns the right edge of the dropdown with the right edge of its parent */
+  left: 0;  /* Removes any left positioning */
+  min-width: 170px;  /* Adjust this value as needed */
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Ensure the parent element of the dropdown has a relative position */
+.dropdown {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-content a {
+  display: block;
+  text-align: left;
+  padding: 5px 5px;
+  margin: 0;
+  text-decoration: none;
+  color: #333; /* Adjust color as needed */
+  white-space: nowrap;
+  width: 100%;
+}
+
 /* footer */
 .footer{
   background-color: var(--primary-color);
