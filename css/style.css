@@ -445,6 +445,12 @@ ul{
 
 }
 
+.footer-col p {
+  display: inline-block;
+  color: white;
+  margin: 0 10px 10px 0;
+}
+
 .footer-col .social-links a:hover{
   color: var(--dark-color);
   background-color: #b9732f;
